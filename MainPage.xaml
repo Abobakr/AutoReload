@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"  
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"  
+            x:Class="AutoReload.MainPage">
+
+    <VerticalStackLayout  
+       Padding="10"  
+       Spacing="10"
+        Margin="0,-40,0,0"
+        VerticalOptions="Fill"
+        HorizontalOptions="Fill">
+
+        <Label Text="Finish Israeli occupation in one click 🔻"  
+        FontSize="20"  
+        HorizontalOptions="Center" />
+
+
+        <Border Padding="5"  
+               Stroke="DarkGoldenrod"  
+               StrokeShape="RoundRectangle 10">
+            <ScrollView HeightRequest="150">
+                <Grid x:Name="WebsitesGrid"
+                  Padding="10"
+                  ColumnDefinitions="Auto, *" 
+                  RowDefinitions="Auto">
+
+                    <CheckBox x:Name="SelectAllCheckBox"  
+                   CheckedChanged="OnSelectAllCheckedChanged"  
+                   Grid.Row="0"  
+                   Grid.Column="0" />
+
+                    <Label Text="Select All"
+                       FontAttributes="Bold"
+                       Grid.Row="0"
+                       Grid.Column="1" 
+                       VerticalOptions="Center"/>
+
+                    <!-- Dynamic Rows Will Be Added in Code-Behind -->
+                </Grid>
+            </ScrollView>
+        </Border>
+        
+        <Label Text="Automatic Page Reloading Preview"
+               FontSize="20"  
+               HorizontalOptions="Center" />
+
+        <Border Padding="5"  
+               Stroke="DarkGoldenrod"  
+               StrokeShape="RoundRectangle 10">
+           
+            <WebView x:Name="WebView"  
+                    HeightRequest="150" />
+        </Border>
+
+        <!-- Action Button -->
+        <Button x:Name="ActionButton"  
+               Text="Start 🚀"  
+               Clicked="OnActionButtonClicked"  
+               HorizontalOptions="Center" 
+               IsEnabled="False"/>
+
+
+    </VerticalStackLayout>
+
+</ContentPage>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function toggleCheckboxes(checked) {
+            const checkboxes = document.querySelectorAll('tbody input[type="checkbox"]');
+            checkboxes.forEach(checkbox => {
+                checkbox.checked = checked;
+            });
+            toggleButtonState();
+        }
+
+        function toggleButtonState() {
+            const checkboxes = document.querySelectorAll('tbody input[type="checkbox"]');
+            const button = document.getElementById('actionButton');
+            button.disabled = !Array.from(checkboxes).some(checkbox => checkbox.checked);
+        }
+
+        function startStop() {
+            const button = document.getElementById('actionButton');
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            const anchors = document.querySelectorAll('tbody a');
+            if (button.textContent === 'Start 🚀') {
+                button.textContent = 'Stop 🛑';
+                checkboxes.forEach(checkbox => {
+                    checkbox.disabled = true;
+                });
+                anchors.forEach(anchor => {
+                    anchor.classList.add('disabled');
+                });
+
+               
+
+
+            } else {
+                button.textContent = 'Start 🚀';
+                checkboxes.forEach(checkbox => {
+                    checkbox.disabled = false;
+                });
+                anchors.forEach(anchor => {
+                    anchor.classList.remove('disabled');
+                });
+
+
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fafafa;
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        caption {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        td:nth-child(2) {
+            padding-left:50px;
+        }
+
+        #actionButton {
+            margin-bottom: 10px;
+        }
+
+        /* Disable pointer events for disabled anchors */
+        .disabled {
+            pointer-events: none;
+            color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <caption>
+            Most visited websites in USA (2025)
+            <button id="actionButton" onclick="startStop()" style="margin-left:5%" disabled>Start 🚀</button>
+        </caption>
+        <thead>
+            <tr>
+                <th>
+                    <input type="checkbox" onclick="toggleCheckboxes(this.checked)"> Select All
+                </th>
+                <th>Reload Count</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="checkbox" onclick="toggleButtonState()"> <a href="https://www.google.com">Google Search</a></td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" onclick="toggleButtonState()"> <a href="https://www.youtube.com">YouTube</a></td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" onclick="toggleButtonState()"> <a href="https://www.facebook.com">Facebook</a></td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" onclick="toggleButtonState()"> <a href="https://www.instagram.com">Instagram</a></td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" onclick="toggleButtonState()"> <a href="https://www.twitter.com">X</a></td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" onclick="toggleButtonState()"> <a href="https://www.whatsapp.com">WhatsApp</a></td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" onclick="toggleButtonState()"> <a href="https://www.openai.com/chatgpt">ChatGPT</a></td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" onclick="toggleButtonState()"> <a href="https://www.reddit.com">Reddit</a></td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" onclick="toggleButtonState()"> <a href="https://www.yahoo.com">Yahoo!</a></td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" onclick="toggleButtonState()"> <a href="https://www.amazon.com">Amazon</a></td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" onclick="toggleButtonState()"> <a href="https://account.microsoft.com">Microsoft Online</a></td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" onclick="toggleButtonState()"> <a href="https://www.linkedin.com">LinkedIn</a></td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" onclick="toggleButtonState()"> <a href="https://www.netflix.com">Netflix</a></td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" onclick="toggleButtonState()"> <a href="https://outlook.live.com">Live</a></td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" onclick="toggleButtonState()"> <a href="https://www.microsoft.com/microsoft-365">Microsoft 365</a></td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" onclick="toggleButtonState()"> <a href="https://www.bing.com">Microsoft Bing</a></td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" onclick="toggleButtonState()"> <a href="https://www.pinterest.com">Pinterest</a></td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" onclick="toggleButtonState()"> <a href="https://www.microsoft.com">Microsoft</a></td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" onclick="toggleButtonState()"> <a href="https://www.twitch.tv">Twitch</a></td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" onclick="toggleButtonState()"> <a href="https://www.microsoft.com/sharepoint">SharePoint</a></td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" onclick="toggleButtonState()"> <a href="https://weather.com">Weather</a></td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" onclick="toggleButtonState()"> <a href="https://www.fandom.com">Fandom</a></td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" onclick="toggleButtonState()"> <a href="https://www.duckduckgo.com">DuckDuckGo</a></td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td><i><input type="checkbox" onclick="toggleButtonState()"> <a href="https://www.nytimes.com">The New York Times</a></i></td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" onclick="toggleButtonState()"> <a href="https://www.zoom.us">Zoom</a></td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" onclick="toggleButtonState()"> <a href="https://www.quora.com">Quora</a></td>
+                <td>0</td>
+            </tr>
+        </tbody>        
+    </table>
+</body>
+
+</html>
