@@ -1,1 +1,1 @@
-# AutoReload
+# By auto-making fluff visits, this is an application to cause nonsense overload to the main websites' servers of big tech companies supporting the Israeli, cruel, brutal, disgusting occupation, or those even just paying huge taxes to the Gaza genocide sponsoring US governments
