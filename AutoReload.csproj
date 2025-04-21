@@ -39,6 +39,14 @@
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
 		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
+
+		<AndroidPackageFormat>apk</AndroidPackageFormat>
+  		<AndroidKeyStore>true</AndroidKeyStore>
+  		<AndroidSigningKeyStore>my-release-key.keystore</AndroidSigningKeyStore>
+  		<AndroidSigningStorePass>fslhggi</AndroidSigningStorePass>
+  		<AndroidSigningKeyAlias>my-key-alias</AndroidSigningKeyAlias>
+  		<AndroidSigningKeyPass>fslhggi</AndroidSigningKeyPass>
+
 	</PropertyGroup>
 
 	<ItemGroup>

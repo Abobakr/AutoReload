@@ -6,7 +6,7 @@
     <VerticalStackLayout  
        Padding="10"  
        Spacing="10"
-        Margin="0,-40,0,0"
+        Margin="0,0,0,0"
         VerticalOptions="Fill"
         HorizontalOptions="Fill">
 
@@ -18,7 +18,7 @@
         <Border Padding="5"  
                Stroke="DarkGoldenrod"  
                StrokeShape="RoundRectangle 10">
-            <ScrollView HeightRequest="150">
+            <ScrollView HeightRequest="250">
                 <Grid x:Name="WebsitesGrid"
                   Padding="10"
                   ColumnDefinitions="Auto, *" 
@@ -49,7 +49,7 @@
                StrokeShape="RoundRectangle 10">
            
             <WebView x:Name="WebView"  
-                    HeightRequest="150" />
+                    HeightRequest="200" />
         </Border>
 
         <!-- Action Button -->
