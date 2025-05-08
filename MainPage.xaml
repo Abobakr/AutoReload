@@ -6,7 +6,6 @@
     <VerticalStackLayout  
        Padding="10"  
        Spacing="10"
-        Margin="0,0,0,0"
         VerticalOptions="Fill"
         HorizontalOptions="Fill">
 
@@ -18,7 +17,7 @@
         <Border Padding="5"  
                Stroke="DarkGoldenrod"  
                StrokeShape="RoundRectangle 10">
-            <ScrollView HeightRequest="250">
+            <ScrollView HeightRequest="200">
                 <Grid x:Name="WebsitesGrid"
                   Padding="10"
                   ColumnDefinitions="Auto, *" 
